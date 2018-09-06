@@ -1,0 +1,103 @@
+﻿
+@{
+	ViewBag.Title = "Index";
+	//Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="~/Areas/Admin/Content/formbuilder/css/demo.css" rel="stylesheet" />
+	<link href="~/Areas/Admin/Content/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Areas/Admin/Content/formbuilder/css/jquery.rateyo.min.css" rel="stylesheet" />
+
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<!-- jQuery library -->
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="~/Areas/Admin/Content/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+	<!-- add thids links for the error message-->
+	<link href="~/Areas/Admin/Content/dist/css/toastr.css" rel="stylesheet" />
+		<script src="~/Areas/Admin/Content/dist/js/toastr.js"></script>
+
+
+	<title>Dynamic FormBuilder Demo</title>
+	<style>
+		.form-active {
+			padding: 10px !important;
+			border-radius: 10px !important;
+			background-color: #fff !important;
+		}
+
+		.copy-html {
+			color: #fff;
+			background-color: #1b3249;
+			border-color: transparent;
+			display: none;
+		}
+
+		.edit-form {
+			color: #fff;
+			background-color: #69727c;
+			border-color: transparent;
+			float: left !important;
+		}
+
+			.edit-form:hover {
+				color: #fff;
+				background-color: #69727c;
+				border-color: transparent;
+			}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1>Dynamic Form Builder</h1>
+		<div class="row">
+
+			<div class="col-md-3">
+
+				<input type="text" id="txtFormName" placeholder="Please Enter Your Form Name" class="form-control" style="display:none" /><br />
+			</div>
+			<div class="col-md-9"></div>
+		</div>
+		<div id="stage1" class="build-wrap"></div>
+		<form class="render-wrap"></form>
+
+		<div class="btn-group pull-right">
+
+			<button type="button" id="edit-form" class="btn btn-secondary edit-form">Edit Form</button>
+			<button type="button" id="btnSaveForm" class="btn btn-primary copy-html" style="display:none;" onclick="SaveDynamicForm();">Save Form</button>
+		</div>
+		@*<div class="action-buttons">
+				<h2>Actions</h2>
+				<button id="showData" type="button">Show Data</button>
+				<button id="clearFields" type="button">Clear All Fields</button>
+				<button id="getData" type="button">Get Data</button>
+				<button id="getXML" type="button">Get XML Data</button>
+				<button id="getJSON" type="button">Get JSON Data</button>
+				<button id="getJS" type="button">Get JS Data</button>
+				<button id="setData" type="button">Set Data</button>
+				<button id="addField" type="button">Add Field</button>
+				<button id="removeField" type="button">Remove Field</button>
+				<button id="testSubmit" type="submit">Test Submit</button>
+				<button id="resetDemo" type="button">Reset Demo</button>
+			</div>*@
+	</div>
+	<input type="hidden" id="hdnexist" value="False"/>
+	<script src="~/Areas/Admin/Content/formbuilder/js/vendor.js"></script>
+	<script src="~/Areas/Admin/Content/formbuilder/js/form-builder.min.js"></script>
+	<script src="~/Areas/Admin/Content/formbuilder/js/form-render.min.js"></script>
+	<script src="~/Areas/Admin/Content/formbuilder/js/jquery.rateyo.min.js"></script>
+	
+	<script src="~/Areas/Admin/Content/formbuilder/js/demo.js"></script>
+</body>
+</html>
+
+
+
+
